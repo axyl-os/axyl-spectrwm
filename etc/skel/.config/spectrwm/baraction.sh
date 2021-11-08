@@ -31,6 +31,11 @@ bat() {
     echo -e " $bat%"
 }
 
+blight() {
+  light=`brightness --get`
+  echo -e " $light"
+}
+
 ## DATE & TIME
 date_time() {
   date_time="$(date '+%A, %d/%m/%y %I:%M %p')"
@@ -50,7 +55,7 @@ SLEEP_SEC=0.25
 # So I would love to add more functions to this script but it makes the 
 # echo output too long to display correctly.
 while :; do
-  echo "+@fg=1;+@fg=8;+@bg=1; $(cpu) +@fg=2;+@fg=8;+@bg=2; $(mem) +@fg=3;+@fg=8;+@bg=3; $(hdd) +@fg=4;+@fg=8;+@bg=4; $(vol) +@fg=5;+@fg=8;+@bg=5; $(bat) +@fg=7;+@fg=8;+@bg=6; $(date_time) +@fg=8;+@fg=7;+@bg=0; $(up_time)"
+  echo "+@fg=1;+@fg=8;+@bg=1; $(cpu) +@fg=2;+@fg=8;+@bg=2; $(mem) +@fg=3;+@fg=8;+@bg=3; $(hdd) +@fg=4;+@fg=8;+@bg=4; $(blight) $(vol) +@fg=5;+@fg=8;+@bg=5; $(bat) +@fg=7;+@fg=8;+@bg=6; $(date_time) +@fg=8;+@fg=7;+@bg=0; $(up_time)"
 	sleep $SLEEP_SEC
 done
 
