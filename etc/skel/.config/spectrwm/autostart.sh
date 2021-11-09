@@ -24,6 +24,8 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # power manager and picom start
 xfce4-power-manager &
+
+while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
 picom --config $HOME/.config/spectrwm/picom.conf &
 
 if [[ ! `pidof xfce-polkit` ]]; then
