@@ -27,7 +27,7 @@ vol() {
 
 ## BATTERY
 bat() {
-    bat=`cat /sys/class/power_supply/BAT1/capacity`
+    bat=$(cat /sys/class/power_supply/*BAT*/capacity)
     echo -e " $bat%"
 }
 
