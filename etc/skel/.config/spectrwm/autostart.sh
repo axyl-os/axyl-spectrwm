@@ -4,7 +4,11 @@
 bash $HOME/.config/spectrwm/.fehbg
 
 # Kill if already running
-killall -9 picom xfce4-power-manager ksuperkey dunst sxhkd
+killall -9 picom xfce4-power-manager ksuperkey dunst sxhkd eww
+
+# Launch Conkeww
+sed -i "s/colors\/color-.*/colors\/color-everforest.yuck\")/g" $HOME/.config/conkeww/eww.yuck
+eww --config $HOME/.config/conkeww/ open conkeww-main
 
 # start hotkey daemon
 sxhkd -c $HOME/.config/spectrwm/sxhkdrc &
