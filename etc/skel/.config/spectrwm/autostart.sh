@@ -36,3 +36,7 @@ sed -i "s/theme =.*$/theme = \"everforest\",/g" $HOME/.config/nvim/lua/custom/ch
 # change xfce4-terminal colorscheme
 XFCE_TERM_PATH="$HOME/.config/xfce4/terminal"
 cp "$XFCE_TERM_PATH"/colorschemes/everforest "$XFCE_TERM_PATH"/terminalrc
+
+# change cava colorscheme
+CAVA_PATH="$HOME/.config/cava"
+cp "$CAVA_PATH"/colorschemes/everforest "$CAVA_PATH"/config
